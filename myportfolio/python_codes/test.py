@@ -111,8 +111,8 @@ def get_location_route():
 
 
 # to send single mail
-sender_email = "priyamsanodiya340@gmail.com"  # Replace with your email
-sender_password = "dhgy zwex fjan nrgu"  # Replace with your app-specific password
+sender_email = "your email address"  # Replace with your email
+sender_password = "your password"  # Replace with your app-specific password
 
 @app.route('/send_email', methods=['POST'])
 def send_email():
@@ -145,8 +145,8 @@ def send_email():
 
 # TO send sms using twilio
 
-account_sid = 'AC898946107af3ee2f7f77e21feb3d3c18'
-auth_token =  'a58bae4e96dca74cfe6ce31466ca022e'
+account_sid = 'your  account sid'
+auth_token =  'your auth tocken'
 
 
 # Initialize Twilio client
@@ -208,8 +208,8 @@ def send_emails():
     body = data.get('body')
     recipients = data.get('recipients')
     
-    sender_email = "priyamsanodiya340@gmail.com"  # Replace with your email
-    sender_password = "dhgy zwex fjan nrgu"  # Replace with your app-specific password
+    sender_email = "your email id"  # Replace with your email
+    sender_password = "your email password"  # Replace with your app-specific password
     
     response = send_bulk_emails(sender_email, sender_password, subject, body, recipients)
     return jsonify({'message': response})
