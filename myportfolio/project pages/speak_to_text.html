@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speak to Text Converter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #007bff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            width: 80%;
+            max-width: 600px;
+            height: 150px;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            resize: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Speak to Text Converter</h1>
+    <textarea id="speechToText" placeholder="Your speech will appear here..." disabled></textarea>
+    <button onclick="voice()">Start Speaking</button>
+
+    <script>
+        function voice() {
+            var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.lang = "en-GB";
+
+            recognition.onresult = function (event) {
+                console.log(event);
+                document.getElementById("speechToText").value = event.results[0][0].transcript;
+            };
+
+            recognition.start();
+        }
+    </script>
+</body>
+
+</html>
