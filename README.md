@@ -4,7 +4,7 @@
 This project is a capstone application that integrates key technologies from my curriculum into a versatile, menu-driven toolkit. Each menu option represents a distinct area of expertise, providing practical solutions and educational value.
 
 # Features
-Frontend Development: Responsive UI with HTML, CSS, and JavaScript.
+Frontend Development: Responsive UI with HTML, CSS, and JavaScript.\n
 Python Programming: Automation scripts, API integration, and data manipulation.
 GenAIops: AI-driven DevOps to optimize workflows with generative AI.
 Docker: Containerized applications ensuring consistency across environments.
