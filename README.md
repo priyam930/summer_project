@@ -1,9 +1,9 @@
 # summer_project
-Menu-Driven Project: A Comprehensive Toolkit
-Overview
+# Menu-Driven Project: A Comprehensive Toolkit
+# Overview
 This project is a capstone application that integrates key technologies from my curriculum into a versatile, menu-driven toolkit. Each menu option represents a distinct area of expertise, providing practical solutions and educational value.
 
-Features
+# Features
 Frontend Development: Responsive UI with HTML, CSS, and JavaScript.
 Python Programming: Automation scripts, API integration, and data manipulation.
 GenAIops: AI-driven DevOps to optimize workflows with generative AI.
@@ -12,10 +12,8 @@ Full Stack Development: Complete web application with frontend, backend (Node.js
 Databases: CRUD operations and complex queries for SQL and NoSQL databases.
 Linux Operations: Shell scripting, system administration, and network management.
 AWS Services: Deployment, storage, and computing using EC2, S3, Lambda, and more.
-Deployment
-The project is deployed on an Apache web server hosted on an AWS EC2 instance.
 
-Steps:
+## Steps:
 
 Launch AWS EC2 instance and allow necessary traffic.
 Install Apache: yum install httpd, then systemctl start httpd and systemctl enable httpd.
